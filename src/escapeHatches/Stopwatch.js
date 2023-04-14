@@ -13,7 +13,7 @@ const Stopwatch=()=>{
             setNow(Date.now());
         }, 10);
     }
-    console.log(clearInterval);
+
     const handleStop=()=>{
         clearInterval(intervalRef.current);
     }
