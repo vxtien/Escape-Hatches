@@ -1,12 +1,10 @@
 import { useRef, useState } from "react"
-
 const VideoPlayer=()=>{
     const [isPlaying, setPlaying] = useState(false);
     const ref = useRef(null);
     const handleClick=()=>{
         const nextIsPlaying = !isPlaying;
         setPlaying(nextIsPlaying);
-
         if (nextIsPlaying) {
             ref.current.play();
         } else {

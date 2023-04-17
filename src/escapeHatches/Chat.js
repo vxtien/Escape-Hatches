@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-
 const Chat=()=>{
     const [text, setText] = useState('');
     const textRef = useRef(text)

@@ -1,4 +1,4 @@
-export const createConnection=(serverUrl, roomId)=>{
+export const createConnection=(serverUrl,roomId)=>{
     return {
         connect(){
             console.log('✓ Connecting to "' + roomId + '" room at ' + serverUrl + '...')
@@ -7,4 +7,4 @@ export const createConnection=(serverUrl, roomId)=>{
             console.log('X Disconnected from "' + roomId + '" room at ' + serverUrl);
         }
     }
-}
+} 

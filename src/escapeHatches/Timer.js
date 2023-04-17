@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { experimental_useEffectEvent as useEffectEvent} from "react";
-
 const Timer=()=>{
     const [count, setCount] = useState(0);
     const [increment, setIncrement] = useState(1);
@@ -17,7 +16,6 @@ const Timer=()=>{
     //         clearInterval(id);
     //     }
     // }, [increment])
-
     useEffect(() => {
         const id = setInterval(() => {
             onTick();
@@ -27,14 +25,12 @@ const Timer=()=>{
     const handleReset=()=>{
         setCount(0);
     }
-
     const handleDecrease=()=>{
         setIncrement(increment - 1)
     }
     const handleIncrement=()=>{
         setIncrement(increment + 1)
     }
-
     return(
         <>
             <h1>

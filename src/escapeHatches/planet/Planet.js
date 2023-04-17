@@ -21,7 +21,6 @@ const Planets=()=>{
       ignore = true;
     }
   }, []);
-
   useEffect(() => {
     if (planetId === '') {
       return;

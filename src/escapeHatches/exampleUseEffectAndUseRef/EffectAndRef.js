@@ -17,8 +17,7 @@ const EffectAndRef = () => {
   };
   return (
     <>
-      <button onClick={handleShow}>{show ? "Hiden" : "Show"} form</button>
-      
+      <button onClick={handleShow}>{show ? "Hiden" : "Show"} form</button>    
       <br />
       <hr />
       {show && (

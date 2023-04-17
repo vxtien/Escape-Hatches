@@ -9,7 +9,6 @@ export function fetchData(url) {
       return fetchPlaces(match[1]);
     } else throw Error('Expected URL like "/planets" or "/planets/earth/places". Received: "' + url + '".');
   }
-  
   async function fetchPlanets() {
     return new Promise(resolve => {
       setTimeout(() => {

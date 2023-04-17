@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ChatRoom from "./ChatRoom";
-
 const ChatApp=()=>{
     const [roomId, setRoomId] = useState('general');
     const [show, setShow] = useState(false);
@@ -9,7 +8,7 @@ const ChatApp=()=>{
     }
     const handleShow=()=>{
         setShow(!show)
-    }
+    } 
     return(
         <>
             <label>
