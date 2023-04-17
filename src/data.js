@@ -5,6 +5,7 @@ import EffectAndRef from "./escapeHatches/exampleUseEffectAndUseRef/EffectAndRef
 import Timer from "./escapeHatches/Timer";
 import ChatApp from "./escapeHatches/chatApp/ChatApp";
 import Planet from "./escapeHatches/planet/Planet";
+import Counter from "./escapeHatches/counter/Counter";
 
 export const data = [
     {
@@ -41,5 +42,10 @@ export const data = [
         link: '/planet',
         title: 'Planet',
         component: <Planet/>
+    },
+    {
+        link: '/counter',
+        title: 'Counter',
+        component: <Counter/>
     }
 ]
