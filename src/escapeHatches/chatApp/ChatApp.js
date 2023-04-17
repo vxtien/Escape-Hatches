@@ -1,39 +1,33 @@
 import { useState } from "react";
 import ChatRoom from "./ChatRoom";
 
-const serverUrl = 'https:localhost:3000'
-
 const ChatApp=()=>{
     const [roomId, setRoomId] = useState('general');
-    const [isDark, setIsDark] = useState(false);
+    const [show, setShow] = useState(false);
     const handleChangleRoom=(e)=>{
         setRoomId(e.target.value);
+    }
+    const handleShow=()=>{
+        setShow(!show)
     }
     return(
         <>
             <label>
-                Choose the chat room:{' '}
+                Choose the chat room:
                 <select
                     value={roomId}
                     onChange={handleChangleRoom}
                 >
-                    <option>general</option>
-                    <option>travel</option>
-                    <option>music</option>
+                    <option value="general">general</option>
+                    <option value="travel">travel</option>
+                    <option value="music">music</option>
                 </select>
             </label>
-            <label>
-                <input
-                    type="checkbox"
-                    
-                />
-                Use dark theme
-            </label>
-            <hr/>
-            <ChatRoom
-                roomId={roomId}
-                theme={isDark ? 'dark' : 'light'}
-            />
+            <button onClick={handleShow}>
+                {show ? 'Close chat' : 'Open chat'}
+            </button>
+            {show && <hr />}
+            {show && <ChatRoom roomId={roomId}/>}
         </>
     )
 }

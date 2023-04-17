@@ -8,13 +8,13 @@ const App = () => {
     <div className="container">
       <div className="app">
         <ul>
-          {components.map(({link, title}) => (
+          {data.map(({link, title}) => (
             <li><Link to={link}>{title}</Link></li>
           ))}
         </ul>
       </div>
       <Routes>
-        {components.map(({link, component}) => 
+        {data.map(({link, component}) => 
           <Route path={link} element={component}/>
         )}
       </Routes>
