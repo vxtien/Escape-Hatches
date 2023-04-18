@@ -1,27 +1,30 @@
 import { useEffect, useState } from "react";
-import { experimental_useEffectEvent as useEffectEvent} from "react";
+// import { experimental_useEffectEvent as useEffectEvent} from "react";
 const Timer=()=>{
     const [count, setCount] = useState(0);
     const [increment, setIncrement] = useState(1);
+    const [number, setNumber] = useState([0,0]);
 
-    const onTick = useEffectEvent(() => {
-        setCount(c => c + increment);
-    })
 
+
+    // const onTick = useEffectEvent(() => {
+    //     setCount(c => c + increment);
+    // })
     // useEffect(() => {
     //     const id = setInterval(() => {
-    //         setCount(c => c + increment);
+    //         onTick();
     //     }, 1000);
-    //     return () => {
-    //         clearInterval(id);
-    //     }
-    // }, [increment])
+    //     return () => {clearInterval(id)};
+    // })
+
     useEffect(() => {
         const id = setInterval(() => {
-            onTick();
+            setCount(c => c + increment);
         }, 1000);
-        return () => {clearInterval(id)};
-    })
+        return () => {
+            clearInterval(id);
+        }
+    }, [increment])
     const handleReset=()=>{
         setCount(0);
     }
@@ -48,3 +51,4 @@ const Timer=()=>{
     )
 }
 export default Timer;
+

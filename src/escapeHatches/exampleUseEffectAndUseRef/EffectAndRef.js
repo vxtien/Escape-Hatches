@@ -15,6 +15,9 @@ const EffectAndRef = () => {
   const handleChangeLastName = (e) => {
     setLastName(e.target.value);
   };
+  const handleChecked = (e) => {
+    setUpper(e.target.checked);
+  };
   return (
     <>
       <button onClick={handleShow}>{show ? "Hiden" : "Show"} form</button>    
@@ -42,7 +45,7 @@ const EffectAndRef = () => {
             <input
               type="checkbox"
               checked={upper}
-              onChange={(e) => setUpper(e.target.checked)}
+              onChange={handleChecked}
             /> Make it uppercase
           </label>
           <p>

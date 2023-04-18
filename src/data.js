@@ -6,8 +6,17 @@ import Timer from "./escapeHatches/Timer";
 import ChatApp from "./escapeHatches/chatApp/ChatApp";
 import Planet from "./escapeHatches/planet/Planet";
 import Counter from "./escapeHatches/counter/Counter";
+import Example from "./useEffect/Example";
+import Example2 from "./useEffect/Example1";
+import Cursor from "./useEffect/Cursor";
+import WorldMap from "./useEffect/worldMap/WorldMap";
+import Page from "./useEffect/fetchingDataWithEffects/Page";
 
 export const data = [
+    {
+        link: '/Home',
+        title: "Home",
+    },
     {
         link: '/stopwatch',
         title: 'Stopwatch',
@@ -47,5 +56,30 @@ export const data = [
         link: '/counter',
         title: 'Counter',
         component: <Counter/>
+    },
+    {
+        link: '/example',
+        title: 'ClassComponent',
+        component: <Example/>
+    },
+    {
+        link: '/example1',
+        title: 'FunctionalComponent',
+        component: <Example2/>
+    },
+    {
+        link: '/cursor',
+        title: 'Cursor',
+        component: <Cursor/>
+    },
+    {
+        link: '/world-map',
+        title: 'World Map',
+        component: <WorldMap/>
+    },
+    {
+        link: '/fetch-api',
+        title: 'Fetch API',
+        component: <Page/>
     }
 ]
