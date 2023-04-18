@@ -7,14 +7,11 @@ const Page=()=>{
 
     // dung Promise
     // useEffect(() => {
-    //     let ignore = false;
+    //     
     //     setBio(null);
-    //     fetchBio(person).then(result => {
-    //         if (!ignore) {
-    //             setBio(result);
-    //         }
+    //     fetchBio(person).then(result => {  
+    //     setBio(result);     
     //     });
-    //     return () => {ignore = true};
     // }, [person])
 
     // async/await
@@ -22,14 +19,9 @@ const Page=()=>{
         async function startFetching() {
             setBio(null);
             const result = await fetchBio(person);
-            if (!ignore) {
-                setBio(result)
-            }
+            setBio(result)
         }
-
-        let ignore = false;
         startFetching();
-        return () => {ignore = true}
     }, [person])
 
     return (
@@ -44,3 +36,4 @@ const Page=()=>{
     )
 }
 export default Page;
+
